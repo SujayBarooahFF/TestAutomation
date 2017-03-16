@@ -15,6 +15,7 @@ namespace RMxAutomation
         {
             get
             {
+                // need explicit waits here... TODO wait till element is loaded on page
                 Thread.Sleep(2000);
                 var element = Driver.Instance.FindElement(By.Id("nameTextbox"));
                 text = element.GetAttribute("value");
@@ -25,7 +26,6 @@ namespace RMxAutomation
                 }                   
                 return String.Empty;
             }
-
         }
     }
 }

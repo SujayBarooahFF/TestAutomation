@@ -49,10 +49,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreatePostCommand.cs" />
     <Compile Include="DashboardPage.cs" />
     <Compile Include="Driver.cs" />
-    <Compile Include="LoginCommand.cs" />
+    <Compile Include="LandingPage.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="NewTradeAgreementPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

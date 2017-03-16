@@ -18,7 +18,9 @@ namespace RMxTests
         public void Can_Create_A_Simple_TA()
         {
             LoginPage.Goto();
-            LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
+            //LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
+            LoginPage loginPAge = new LoginPage(); 
+            loginPAge.LoginDefault().Login();
             Thread.Sleep(1000);
             NewTradeAgreementPage.GoTo();
             NewTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")

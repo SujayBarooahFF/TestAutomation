@@ -11,13 +11,12 @@ namespace RMxAutomation
 {
     public class LoginPage
     {
-
         public static void Goto()
         {
             Driver.Instance.Navigate().GoToUrl("http://azara-qa.foxdev.flintfox.com");
             //var wait = new WebDriverWait(Driver.)
         }
-
+        public  LoginCommand LoginDefault() { return new LoginCommand(); }
         public static LoginCommand LoginAs(string userName)
         {
             return new LoginCommand(userName);
@@ -26,8 +25,18 @@ namespace RMxAutomation
 
     public class LoginCommand
     {
+        const string username_const = "sbarooah@flintfox.com";
+        const string password_const = "Qwerty90";
+
         private readonly string userName;
         private string password;
+
+        public LoginCommand()
+        {
+            this.userName = username_const;
+            this.password = password_const;
+
+        }
         public LoginCommand (string userName)
         {
             this.userName = userName;
