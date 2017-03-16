@@ -13,9 +13,7 @@ namespace RMxAutomation
         {
             get
             {
-
                 var Landing = Driver.Instance.FindElement(By.ClassName("logo-rm"));
-
                 if (Landing != null)
                     return true;
                 return false;

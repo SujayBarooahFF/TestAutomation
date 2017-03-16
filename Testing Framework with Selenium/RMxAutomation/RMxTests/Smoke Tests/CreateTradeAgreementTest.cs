@@ -6,22 +6,16 @@ using System.Threading;
 namespace RMxTests
 {
     [TestClass]
-    public class CreateTradeAgreementTest
+    public class CreateTradeAgreementTest : RMxTestsBaseClass
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
         [TestMethod]
         public void Can_Create_A_Simple_TA()
         {
-            LoginPage.Goto();
+            //LoginPage.Goto();
             //LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
-            LoginPage loginPAge = new LoginPage(); 
-            loginPAge.LoginDefault().Login();
-            Thread.Sleep(1000);
+            //LoginPage loginPAge = new LoginPage(); 
+            //loginPAge.LoginDefault().Login();
+            //Thread.Sleep(1000);
             NewTradeAgreementPage.GoTo();
             NewTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
                 .WithDescription("Automated Test creation")
@@ -29,13 +23,6 @@ namespace RMxTests
             Thread.Sleep(1000);
             //NewTradeAgreementPage.GoToNewTradeAgreement();
             Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with new agreement");
-        }
-
-        [TestCleanup]
-
-        public void Cleanup()
-        {
-            Driver.Close();
         }
     }
 }

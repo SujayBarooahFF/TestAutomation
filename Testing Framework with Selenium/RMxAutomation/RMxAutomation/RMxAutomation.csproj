@@ -55,6 +55,7 @@
     <Compile Include="LoginPage.cs" />
     <Compile Include="NewTradeAgreementPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemMenuNavigation.cs" />
     <Compile Include="TradeAgreementPage.cs" />
   </ItemGroup>
   <ItemGroup>

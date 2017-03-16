@@ -1,30 +1,23 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RMxAutomation;
 using System.Threading;
-
+/*
+ * This is the base test class for RMX tests with definitions for init() and tear down.
+ * 
+ * 
+ */
 namespace RMxTests
 {
-    [TestClass]
-    public class LogoutTest
+    public class RMxTestsBaseClass
     {
+
         [TestInitialize]
         public void Init()
         {
             Driver.Initialize();
-        }
-
-        [TestMethod]
-        public void User_Can_Logout()
-        {
             LoginPage.Goto();
             LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
             Thread.Sleep(1000);
-
-            DashboardPage.LogOut();
-            Thread.Sleep(1000);
-            //NewTradeAgreementPage.GoToNewTradeAgreement();
-            Assert.IsTrue(LandingPage.IsAt, "Failed to LogOut");
         }
 
         [TestCleanup]
@@ -32,5 +25,7 @@ namespace RMxTests
         {
             Driver.Close();
         }
+
     }
+     
 }

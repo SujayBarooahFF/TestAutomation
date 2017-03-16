@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Threading;
 namespace RMxAutomation
 {
     public class Driver
@@ -18,6 +19,11 @@ namespace RMxAutomation
         public static void Close()
         {
             Instance.Close();
+        }
+
+        internal static void Wait(TimeSpan timeSpan)
+        {
+            Thread.Sleep((int)(timeSpan.TotalSeconds*1000));
         }
     }
 }

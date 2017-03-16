@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RMxAutomation
 {
@@ -14,7 +14,7 @@ namespace RMxAutomation
         public static void Goto()
         {
             Driver.Instance.Navigate().GoToUrl("http://azara-qa.foxdev.flintfox.com");
-            //var wait = new WebDriverWait(Driver.)
+            
         }
         public  LoginCommand LoginDefault() { return new LoginCommand(); }
         public static LoginCommand LoginAs(string userName)

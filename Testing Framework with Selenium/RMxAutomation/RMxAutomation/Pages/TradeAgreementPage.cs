@@ -16,7 +16,7 @@ namespace RMxAutomation
             get
             {
                 // need explicit waits here... TODO wait till element is loaded on page
-                Thread.Sleep(2000);
+                Thread.Sleep(5000);
                 var element = Driver.Instance.FindElement(By.Id("nameTextbox"));
                 text = element.GetAttribute("value");
                 if (text != "")
