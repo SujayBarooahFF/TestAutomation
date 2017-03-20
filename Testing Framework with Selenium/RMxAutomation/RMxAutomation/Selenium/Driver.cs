@@ -20,7 +20,7 @@ namespace RMxAutomation
         {
             Instance.Close();
         }
-
+        // generalized wait method
         internal static void Wait(TimeSpan timeSpan)
         {
             Thread.Sleep((int)(timeSpan.TotalSeconds*1000));

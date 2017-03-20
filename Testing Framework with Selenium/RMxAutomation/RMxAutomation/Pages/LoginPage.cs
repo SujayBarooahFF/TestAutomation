@@ -16,7 +16,10 @@ namespace RMxAutomation
             Driver.Instance.Navigate().GoToUrl("http://azara-qa.foxdev.flintfox.com");
             
         }
-        public  LoginCommand LoginDefault() { return new LoginCommand(); }
+        public  LoginCommand LoginDefault() 
+        { 
+            return new LoginCommand(); 
+        }
         public static LoginCommand LoginAs(string userName)
         {
             return new LoginCommand(userName);

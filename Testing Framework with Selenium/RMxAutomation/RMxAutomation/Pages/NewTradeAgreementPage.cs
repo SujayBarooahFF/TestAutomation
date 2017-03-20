@@ -10,9 +10,10 @@ namespace RMxAutomation
     public class NewTradeAgreementPage
     {
 
+        public static int lastCount;
+
         public static void GoTo()
         {
-            // Refactor: Should we make a general menu navigation? -- done
             SystemMenuNavigation.RMx.SalesTradeAgreement.Select();
 
             //Refactor: should we make generic CRUD operations?
@@ -26,13 +27,36 @@ namespace RMxAutomation
             return new CreateTradeAgreementCommand(name);
         }
 
-        /*
-        public static void GoToNewTradeAgreement()
+        /*public static void GoToNewTradeAgreement()
         {
 
         }
          */
 
+        /* public static void StoreCount()
+        {
+            lastCount = GetSalesTradeAgreementCount();
+        }*/
+
+        /*private static int GetSalesTradeAgreementCount()
+        {
+            // find count of 
+            return 0;
+        }*/
+
+        //public static int PreviousSalesTACount { get; set; }
+
+        //public static string CurrentSalesTACount { get; set; }
+
+        public static bool DoesTradeAgreementExistWithName(string name)
+        {
+            return Driver.Instance.FindElements(By.LinkText(name)).Any();
+        }
+
+        public static void DeleteSalesTradeAgreement(string p)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class CreateTradeAgreementCommand
