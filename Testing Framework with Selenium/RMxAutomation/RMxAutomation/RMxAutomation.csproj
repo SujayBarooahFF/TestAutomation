@@ -49,6 +49,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ReferencesListPage.cs" />
+    <Compile Include="Pages\ReferencePage.cs" />
     <Compile Include="SystemMenuNavigation\MenuSelector.cs" />
     <Compile Include="Pages\DashboardPage.cs" />
     <Compile Include="Selenium\Driver.cs" />

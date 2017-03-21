@@ -34,7 +34,9 @@ namespace RMxTests.SalesTradeAgreementTests
         {
             // Go to SalesTradeAgreementss, get SalesTradeAgreements count, store
             NewTradeAgreementPage.GoTo();
-            NewTradeAgreementPage.StoreCount();
+
+            // TODO: implement record count after count element is added to the page
+            //NewTradeAgreementPage.StoreCount();
 
             // Add a new SalesTradeAgreements
             NewTradeAgreementPage.GoTo();

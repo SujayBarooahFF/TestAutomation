@@ -11,17 +11,12 @@ namespace RMxTests
         [TestMethod]
         public void Can_Create_A_Simple_TA()
         {
-            //LoginPage.Goto();
-            //LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
-            //LoginPage loginPAge = new LoginPage(); 
-            //loginPAge.LoginDefault().Login();
-            //Thread.Sleep(1000);
             NewTradeAgreementPage.GoTo();
             NewTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
                 .WithDescription("Automated Test creation")
                 .SaveChanges();
-            Thread.Sleep(1000);
-            //NewTradeAgreementPage.GoToNewTradeAgreement();
+            Driver.Wait(TimeSpan.FromSeconds(1));
+           
             Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with new agreement");
         }
     }

@@ -12,7 +12,7 @@ namespace RMxTests
         public void User_Can_Logout()
         {
             DashboardPage.LogOut();
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
             //NewTradeAgreementPage.GoToNewTradeAgreement();
             Assert.IsTrue(LandingPage.IsAt, "Failed to LogOut");
         }
