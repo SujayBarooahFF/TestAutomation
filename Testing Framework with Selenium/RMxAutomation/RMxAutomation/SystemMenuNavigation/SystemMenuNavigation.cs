@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RMxAutomation
 {
-    public class SystemMenuNavigation
+    public class SystemMenu
     {
         public class RMx
         {
@@ -19,7 +19,29 @@ namespace RMxAutomation
                     Driver.Wait(TimeSpan.FromSeconds(1));                   
                 }
             }
+            public class PriceInquiry
+            {
+                public static void Select()
+                {
+                    MenuSelector.Select("hamburger", "//*[@id=\"listViewSolutions\"]/div[1]", "//*[@id=\"listViewGroups\"]/div[2]/a");
+                    Driver.Wait(TimeSpan.FromSeconds(1));
+                }
+            }            
+        }
+        
+        public class Settings
+        {
+            public class ReferenceType
+            {
+                public static void Select()
+                {
+                    MenuSelector.Select("hamburger", "//*[@id=\"listViewSolutions\"]/div[2]", "//*[@id=\"listViewGroups\"]/div[2]/a");
+                    Driver.Wait(TimeSpan.FromSeconds(1));
+                }
+            }
+            // other menu options here... Rounding Method, Company etc.
+                        
         }        
     }
-    // other menu options here
+    // sytem admin
 }
