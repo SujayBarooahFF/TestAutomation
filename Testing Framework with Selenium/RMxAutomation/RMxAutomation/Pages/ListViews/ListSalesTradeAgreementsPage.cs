@@ -9,7 +9,6 @@ namespace RMxAutomation
 {
     public class NewTradeAgreementPage
     {
-
         public static int lastCount;
 
         public static void GoTo()
