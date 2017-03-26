@@ -60,9 +60,9 @@
     <Compile Include="Smoke Tests\CreateReferenceTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RMxAutomation\RMxAutomation.csproj">
+    <ProjectReference Include="..\RMxAutomation\RMxAutomationFramework.csproj">
       <Project>{4552575a-2610-4175-b045-39bcce90d90c}</Project>
-      <Name>RMxAutomation</Name>
+      <Name>RMxAutomationFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
