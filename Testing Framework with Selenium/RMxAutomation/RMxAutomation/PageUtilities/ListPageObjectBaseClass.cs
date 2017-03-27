@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace RMxAutomation.PageUtilities
+namespace RMxAutomationFramework.PageUtilities
 {
     public class ListPageObjectBaseClass
     {

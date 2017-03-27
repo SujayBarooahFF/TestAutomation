@@ -7,7 +7,7 @@
     <ProjectGuid>{4552575A-2610-4175-B045-39BCCE90D90C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RMxAutomation</RootNamespace>
+    <RootNamespace>RMxAutomationFramework</RootNamespace>
     <AssemblyName>RMxAutomation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListViewFunctionality\ListViewOptions.cs" />
     <Compile Include="Pages\ListViews\ListReferencesPage.cs" />
     <Compile Include="Pages\FormViews\NewReferencePage.cs" />
     <Compile Include="PageUtilities\ListPageObjectBaseClass.cs" />

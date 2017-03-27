@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace RMxAutomation
+namespace RMxAutomationFramework
 {
     public class LoginPage
     {

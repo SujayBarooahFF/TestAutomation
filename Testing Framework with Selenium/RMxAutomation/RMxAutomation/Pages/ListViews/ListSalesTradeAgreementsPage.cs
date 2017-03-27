@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace RMxAutomation
+namespace RMxAutomationFramework
 {
     public class ListTradeAgreementPage
     {
@@ -14,11 +14,9 @@ namespace RMxAutomation
         public static void GoTo()
         {
             SystemMenu.RMx.SalesTradeAgreement.Select();
-
+            
             //Refactor: should we make generic CRUD operations?
-            var addnew = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-addnew"));
-            addnew.Click();
-            Driver.Wait(TimeSpan.FromSeconds(1));
+            ListViewOptions.Add();           
         }
 
         public static CreateTradeAgreementCommand CreateTradeAgreement(string name)
@@ -52,10 +50,11 @@ namespace RMxAutomation
             return Driver.Instance.FindElements(By.LinkText(name)).Any();
         }
 
-        public static void DeleteSalesTradeAgreement(string p)
+        public static void DeleteSalesTradeAgreement(string name)
         {
-            throw new NotImplementedException();
+            var selectedRecord = Driver.Instance.FindElements(By.LinkText(name)).Any();
         }
+
     }
 
     public class CreateTradeAgreementCommand

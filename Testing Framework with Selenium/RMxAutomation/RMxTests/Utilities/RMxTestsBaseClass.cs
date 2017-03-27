@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RMxAutomation;
+using RMxAutomationFramework;
 using System.Threading;
 /*
  * This is the base test class for RMX tests with definitions for init() and tear down.

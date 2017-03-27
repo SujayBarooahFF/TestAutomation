@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Threading;
-namespace RMxAutomation
+namespace RMxAutomationFramework
 {
     public class Driver
     {

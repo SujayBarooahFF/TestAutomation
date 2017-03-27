@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RMxAutomation
+namespace RMxAutomationFramework
 {
     public class ListReferencesPage
     {   
