@@ -7,9 +7,8 @@ using System.Text;
 
 namespace RMxAutomation
 {
-    public class NewTradeAgreementPage
+    public class ListTradeAgreementPage
     {
-
         public static int lastCount;
 
         public static void GoTo()

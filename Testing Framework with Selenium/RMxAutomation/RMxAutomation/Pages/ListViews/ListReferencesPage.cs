@@ -18,9 +18,9 @@ namespace RMxAutomation
             Driver.Wait(TimeSpan.FromSeconds(1));
         }
 
-        public static CreateReferenceCommand CreateReference(string name)
+        public static CreateReferenceCommand CreateReference(string code)
         {
-            return new CreateReferenceCommand(name);
+            return new CreateReferenceCommand(code);
         }
 
         /* public static void StoreCount()
@@ -38,9 +38,9 @@ namespace RMxAutomation
 
         //public static string CurrentSalesTACount { get; set; }
 
-        public static bool DoesReferenceExistWithName(string name)
+        public static bool DoesReferenceExistWithCode(string code)
         {
-            return Driver.Instance.FindElements(By.LinkText(name)).Any();
+            return Driver.Instance.FindElements(By.LinkText(code)).Any();
         }
 
         public static void DeleteReference(string p)
@@ -51,12 +51,12 @@ namespace RMxAutomation
 
     public class CreateReferenceCommand
     {
-        private readonly string name;
+        private readonly string code;
         private string description;
 
-        public CreateReferenceCommand(string name)
+        public CreateReferenceCommand(string code)
         {
-            this.name = name;
+            this.code = code;
         }
         public CreateReferenceCommand WithDescription(string description)
         {
@@ -66,12 +66,12 @@ namespace RMxAutomation
 
         public void SaveChanges()
         {
-            Driver.Instance.FindElement(By.Id("nameTextbox")).SendKeys(name);
-            Driver.Instance.FindElement(By.XPath("//*[@id=\"az_form_rmx_tradeagreementversion_az_tab1_az_section2_az_composite6_az_textbox4\"]")).SendKeys(description);
+            Driver.Instance.FindElement(By.Id("az_form_az_referencetype_az_tab1_az_section2_az_composite4_az_textbox2")).SendKeys(code);
+            Driver.Instance.FindElement(By.Id("az_form_az_referencetype_az_tab1_az_section2_az_composite6_az_textbox4")).SendKeys(description);
 
             Driver.Wait(TimeSpan.FromSeconds(1));
 
-            Driver.Instance.FindElement(By.CssSelector("#az_form_rmx_tradeagreementversion_az_actionbar1 > div.actionbarcontent > div > ul > li:nth-child(1)")).Click();
+            Driver.Instance.FindElement(By.ClassName("actionname")).Click();
             Driver.Wait(TimeSpan.FromSeconds(2));
 
         }

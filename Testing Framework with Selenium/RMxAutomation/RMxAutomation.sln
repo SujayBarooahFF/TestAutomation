@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMxAutomation", "RMxAutomation\RMxAutomation.csproj", "{4552575A-2610-4175-B045-39BCCE90D90C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMxAutomationFramework", "RMxAutomation\RMxAutomationFramework.csproj", "{4552575A-2610-4175-B045-39BCCE90D90C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMxTests", "RMxTests\RMxTests.csproj", "{6D6EAF40-5302-40EC-8076-04629F4D3093}"
 EndProject

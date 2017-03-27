@@ -11,8 +11,8 @@ namespace RMxTests
         [TestMethod]
         public void Can_Create_A_Simple_TA()
         {
-            NewTradeAgreementPage.GoTo();
-            NewTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
+            ListTradeAgreementPage.GoTo();
+            ListTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
                 .WithDescription("Automated Test creation")
                 .SaveChanges();
             Driver.Wait(TimeSpan.FromSeconds(1));
