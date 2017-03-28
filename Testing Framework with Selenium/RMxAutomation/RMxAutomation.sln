@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMxAutomationFramework", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMxTests", "RMxTests\RMxTests.csproj", "{6D6EAF40-5302-40EC-8076-04629F4D3093}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLDBConnection", "SQLDBConnection\SQLDBConnection.csproj", "{FA634D26-6A45-4257-8A64-77B752BC4C03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6D6EAF40-5302-40EC-8076-04629F4D3093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6EAF40-5302-40EC-8076-04629F4D3093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6EAF40-5302-40EC-8076-04629F4D3093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA634D26-6A45-4257-8A64-77B752BC4C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA634D26-6A45-4257-8A64-77B752BC4C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA634D26-6A45-4257-8A64-77B752BC4C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA634D26-6A45-4257-8A64-77B752BC4C03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

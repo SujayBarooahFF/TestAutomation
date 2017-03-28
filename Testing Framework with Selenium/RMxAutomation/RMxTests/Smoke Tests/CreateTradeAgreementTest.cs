@@ -22,6 +22,7 @@ namespace RMxTests
             Driver.Wait(TimeSpan.FromSeconds(1));
            
             Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with the new agreement");
+
         }
     }
 }

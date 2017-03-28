@@ -38,6 +38,7 @@ namespace RMxAutomationFramework
                 public static void Select()
                 {
                     MenuSelector.Select("hamburger", "//*[@id=\"listViewSolutions\"]/div[2]", "//*[@id=\"listViewGroups\"]/div[2]/a");
+                    
                     Driver.Wait(TimeSpan.FromSeconds(1));
                 }
             }

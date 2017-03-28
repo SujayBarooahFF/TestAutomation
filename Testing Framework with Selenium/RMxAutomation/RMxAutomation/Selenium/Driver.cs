@@ -12,7 +12,7 @@ namespace RMxAutomationFramework
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--start-maximized");
-            Instance = new ChromeDriver("C:\\Users\\sbarooah\\Documents\\Visual Studio 2013\\Projects\\Testing Framework with Selenium\\BrowserDrivers", options);
+            Instance = new ChromeDriver(options);
             TurnOnWait();
         }
 
