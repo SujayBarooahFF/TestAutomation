@@ -15,9 +15,9 @@ namespace RMxAutomationFramework
         public static void GoTo()
         {
             SystemMenu.RMx.SalesTradeAgreement.Select();
-            
+            Add();
             //Refactor: should we make generic CRUD operations?
-            ListViewOptions.Add();           
+            //ListViewOptions.Add();           
         }
 
         public static CreateTradeAgreementCommand CreateTradeAgreement(string name)

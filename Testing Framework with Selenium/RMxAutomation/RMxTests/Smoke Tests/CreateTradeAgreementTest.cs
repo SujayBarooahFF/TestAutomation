@@ -12,7 +12,6 @@ namespace RMxTests
         public void Can_Create_A_Simple_TA()
         {
             ListTradeAgreementPage.GoTo();
-
             // check if in the right view 
             //Assert.IsTrue(ListTradeAgreementPage.IsAt, "Not in SalesTradeAgreement List Page");
 

@@ -31,6 +31,32 @@ namespace RMxAutomationFramework.PageUtilities
             }
         }
 
+        public static void Add()
+        {
+            var addnew = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-addnew"));
+            addnew.Click();
+            Driver.Wait(TimeSpan.FromSeconds(2));
+        }
+
+        public static void Delete()
+        {
+            var delete = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-remove"));
+            delete.Click();
+            Driver.Wait(TimeSpan.FromSeconds(2));
+        }
+
+        public static void Refresh()
+        {
+            var refresh = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-refresh"));
+            refresh.Click();
+            Driver.Wait(TimeSpan.FromSeconds(2));
+        }
+
+        /*public static void SaveAsDefaultView()
+        {
+            
+        }*/
+
         /*public static void GoTo()
         {
            

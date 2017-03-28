@@ -49,7 +49,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListViewFunctionality\ListViewOptions.cs" />
     <Compile Include="Pages\ListViews\ListReferencesPage.cs" />
     <Compile Include="Pages\FormViews\NewReferencePage.cs" />
     <Compile Include="PageUtilities\ListPageObjectBaseClass.cs" />
