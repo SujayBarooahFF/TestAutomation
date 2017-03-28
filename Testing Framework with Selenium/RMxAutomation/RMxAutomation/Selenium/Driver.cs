@@ -20,6 +20,7 @@ namespace RMxAutomationFramework
         {
             Instance.Close();
         }
+
         // generalized wait method
         public static void Wait(TimeSpan timeSpan)
         {
@@ -27,7 +28,6 @@ namespace RMxAutomationFramework
         }
         public static void NoWait(Action action)
         {
-            //Thread.Sleep((int)(timeSpan.TotalSeconds * 1000));
             TurnOffWait();
             action();
             TurnOnWait();

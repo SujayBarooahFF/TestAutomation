@@ -9,6 +9,7 @@ namespace RMxAutomationFramework
 {
     public class SystemMenu
     {
+        // Access items under RMx workspace/ solution
         public class RMx
         {
             public class SalesTradeAgreement
@@ -29,6 +30,7 @@ namespace RMxAutomationFramework
             }            
         }
         
+        // Access items under Settings workspace/ solution
         public class Settings
         {
             public class ReferenceType
@@ -224,7 +226,9 @@ namespace RMxAutomationFramework
             }           
                         
         }
-        public class SystemAdministration   
+
+        // Access items under System Administration workspace/ solution
+        public class SystemAdministration
         {   
             public class TimeZone
             {   
