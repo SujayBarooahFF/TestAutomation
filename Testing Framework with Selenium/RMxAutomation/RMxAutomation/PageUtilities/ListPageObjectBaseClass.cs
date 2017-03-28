@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace RMxAutomationFramework.PageUtilities
 {
@@ -11,16 +12,24 @@ namespace RMxAutomationFramework.PageUtilities
     {
         //public static int lastCount;
 
-        /*public static bool IsAt
+        public static string[] IsAt
         {
             get
             {
-                var Landing = Driver.Instance.FindElement(By.ClassName("logo-rm"));
-                if (Landing != null)
-                    return true;
-                return false;
+                string[] pageId = new string[2];
+               /* uncomment after get routeContext is implemented on the page runtime    
+                * 
+                var routeContext = ((IJavaScriptExecutor)Driver.Instance).ExecuteScript("return routeContext");
+                string entityName = routeContext.EntityName.toString();
+                string viewType = routeContext.PlatformResourceTypeId.toString();
+                
+                pageId [0] = entityName;
+                pageId [1] = viewType;
+                */
+                return (pageId);
+               
             }
-        }*/
+        }
 
         /*public static void GoTo()
         {

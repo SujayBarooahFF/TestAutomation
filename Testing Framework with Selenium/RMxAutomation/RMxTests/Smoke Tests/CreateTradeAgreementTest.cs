@@ -12,12 +12,16 @@ namespace RMxTests
         public void Can_Create_A_Simple_TA()
         {
             ListTradeAgreementPage.GoTo();
+
+            // check if in the right view 
+            //Assert.IsTrue(ListTradeAgreementPage.IsAt, "Not in SalesTradeAgreement List Page");
+
             ListTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
                 .WithDescription("Automated Test creation")
                 .SaveChanges();
             Driver.Wait(TimeSpan.FromSeconds(1));
            
-            Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with new agreement");
+            Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with the new agreement");
         }
     }
 }

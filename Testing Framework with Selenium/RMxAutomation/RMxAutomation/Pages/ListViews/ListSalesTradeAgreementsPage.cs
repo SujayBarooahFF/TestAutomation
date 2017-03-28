@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using OpenQA.Selenium.Support.UI;
+using RMxAutomationFramework.PageUtilities;
 
 namespace RMxAutomationFramework
 {
-    public class ListTradeAgreementPage
+    public class ListTradeAgreementPage : ListPageObjectBaseClass
     {
         public static int lastCount;
-
+        
         public static void GoTo()
         {
             SystemMenu.RMx.SalesTradeAgreement.Select();
