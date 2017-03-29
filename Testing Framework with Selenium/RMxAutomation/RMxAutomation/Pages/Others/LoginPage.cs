@@ -13,7 +13,7 @@ namespace RMxAutomationFramework
     {
         public static void Goto()
         {
-            Driver.Instance.Navigate().GoToUrl("http://azara-qa.foxdev.flintfox.com");
+            Driver.Instance.Navigate().GoToUrl("http://azara-v1.foxdev.flintfox.com");
             
         }
         public  LoginCommand LoginDefault() 
