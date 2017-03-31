@@ -11,28 +11,19 @@ namespace RMxAutomationFramework.PageUtilities
     public class ListPageObjectBaseClass
     {
         //public static int lastCount;
-
-        // this probably is not a good contender for generics. Need to be inside each class.
         public static bool IsAt
         {
             get
             {
-                //string[] pageId = new string[2];
-                // uncomment after get routeContext is implemented on the page runtime    
                 Driver.Wait(TimeSpan.FromSeconds(10));
-                //List<object> routeContext = ((IJavaScriptExecutor)Driver.Instance).ExecuteScript("return window.getRouteContext") as List<object>;
                 IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.Instance;
-                var routeContext = js.ExecuteScript("return eName()");
-                //var platformContext = ((IJavaScriptExecutor)Driver.Instance).ExecuteScript("return platformcontext");
-                //string entityName = routeContext.EntityName.toString();
-                // string viewType = routeContext.PlatformResourceTypeId.toString();
-                
-                // pageId [0] = entityName;
-                // pageId [1] = viewType;                               
-                if (routeContext != null)
-                    return true;
+                string entityName = js.ExecuteScript("return getRouteContext().prop[0].EntityName").ToString();
+                int platformResourceTypeId = Convert.ToInt32(js.ExecuteScript("return getRouteContext().prop[3].PlatformResourceTypeId"));
+                        
+                if (entityName.Equals("TradeAgreementVersion") && platformResourceTypeId == 5)
+                        return true;
                 else
-                    return false;
+                        return false;
             }
         }
 

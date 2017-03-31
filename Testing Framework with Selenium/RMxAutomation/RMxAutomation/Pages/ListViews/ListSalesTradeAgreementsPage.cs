@@ -14,14 +14,13 @@ namespace RMxAutomationFramework
         
         public static void GoTo()
         {
-            SystemMenu.RMx.SalesTradeAgreement.Select();
-            //Add();
-            //Refactor: should we make generic CRUD operations?
-            //ListViewOptions.Add();           
+            SystemMenu.RMx.SalesTradeAgreement.Select();           
         }
 
         public static CreateTradeAgreementCommand CreateTradeAgreement(string name)
         {
+            //select Grid Add button
+            Add();
             return new CreateTradeAgreementCommand(name);
         }
 
