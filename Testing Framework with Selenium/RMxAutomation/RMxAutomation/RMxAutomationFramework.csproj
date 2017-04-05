@@ -52,7 +52,6 @@
     <Compile Include="Pages\ListViews\ListReferencesPage.cs" />
     <Compile Include="Pages\FormViews\NewReferencePage.cs" />
     <Compile Include="PageUtilities\ListPageObjectBaseClass.cs" />
-    <Compile Include="PageUtilities\RouteContext.cs" />
     <Compile Include="SystemMenuNavigation\MenuSelector.cs" />
     <Compile Include="Pages\Others\DashboardPage.cs" />
     <Compile Include="Selenium\Driver.cs" />

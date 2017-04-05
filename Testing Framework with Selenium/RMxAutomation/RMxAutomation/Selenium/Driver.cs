@@ -12,6 +12,7 @@ namespace RMxAutomationFramework
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--start-maximized");
+            options.AddArguments("disable-infobars");
             Instance = new ChromeDriver(options);
             TurnOnWait();
         }
