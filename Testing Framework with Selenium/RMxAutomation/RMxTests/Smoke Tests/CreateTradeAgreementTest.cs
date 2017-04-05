@@ -14,13 +14,14 @@ namespace RMxTests
             ListTradeAgreementPage.GoTo();
             
             // check if in the right view 
-            Assert.IsTrue(ListTradeAgreementPage.IsAt, "Not in SalesTradeAgreement List Page");
+            Assert.IsTrue(ListTradeAgreementPage.IsAt(), "Not in SalesTradeAgreement List Page");
 
 
             ListTradeAgreementPage.CreateTradeAgreement("AutomatedTestName")
                 .WithDescription("Automated Test creation")
                 .SaveChanges();
-            Driver.Wait(TimeSpan.FromSeconds(1));
+            
+            Driver.Wait(TimeSpan.FromSeconds(10));
                        
             Assert.AreEqual(TradeAgreementPage.Name, "AutomatedTestName", "Name did not match with the new agreement");
 

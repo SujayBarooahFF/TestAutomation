@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using OpenQA.Selenium.Support.UI;
 using RMxAutomationFramework.PageUtilities;
+using RMxAutomationFramework.ActionBarOptions;
 
 namespace RMxAutomationFramework
 {
@@ -15,6 +16,19 @@ namespace RMxAutomationFramework
         public static void GoTo()
         {
             SystemMenu.RMx.SalesTradeAgreement.Select();           
+        }
+
+        public static bool IsAt()
+        {
+                Driver.Wait(TimeSpan.FromSeconds(10));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.Instance;
+                string entityName = js.ExecuteScript("return getRouteContext().prop[0].EntityName").ToString();
+                int platformResourceTypeId = Convert.ToInt32(js.ExecuteScript("return getRouteContext().prop[3].PlatformResourceTypeId"));
+
+                if (entityName.Equals("TradeAgreementVersion") && platformResourceTypeId == 5)
+                    return true;
+                else
+                    return false;
         }
 
         public static CreateTradeAgreementCommand CreateTradeAgreement(string name)
@@ -78,10 +92,8 @@ namespace RMxAutomationFramework
             Driver.Instance.FindElement(By.XPath("//*[@id=\"az_form_rmx_tradeagreementversion_az_tab1_az_section2_az_composite6_az_textbox4\"]")).SendKeys(description);
             
             Driver.Wait(TimeSpan.FromSeconds(1));
-            
-            Driver.Instance.FindElement(By.CssSelector("#az_form_rmx_tradeagreementversion_az_actionbar1 > div.actionbarcontent > div > ul > li:nth-child(1)")).Click();
-            Driver.Wait(TimeSpan.FromSeconds(2));
-            
+
+            ActionBar.SaveChanges.Select();       
         }
 
   }

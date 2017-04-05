@@ -49,6 +49,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionBarOptions\ActionBarNavigation.cs" />
+    <Compile Include="ActionBarOptions\ActionBarSelector.cs" />
+    <Compile Include="Pages\ListViews\ListCategoriesPage.cs" />
     <Compile Include="Pages\ListViews\ListReferencesPage.cs" />
     <Compile Include="Pages\FormViews\NewReferencePage.cs" />
     <Compile Include="PageUtilities\ListPageObjectBaseClass.cs" />

@@ -3,23 +3,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using OpenQA.Selenium.Support.UI;
+using RMxAutomationFramework.PageUtilities;
+using RMxAutomationFramework.ActionBarOptions;
 
 namespace RMxAutomationFramework
 {
-    public class ListReferencesPage
+    public class ListReferencesPage : ListPageObjectBaseClass
     {   
         public static void GoTo()
         {
-            SystemMenu.Settings.ReferenceType.Select();        
-                    
-            var addnew = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-addnew"));
-            addnew.Click();
-            Driver.Wait(TimeSpan.FromSeconds(1));
+            SystemMenu.Settings.ReferenceType.Select();                  
         }
 
         public static CreateReferenceCommand CreateReference(string code)
         {
+            Add();
             return new CreateReferenceCommand(code);
         }
 
@@ -71,8 +70,7 @@ namespace RMxAutomationFramework
 
             Driver.Wait(TimeSpan.FromSeconds(1));
 
-            Driver.Instance.FindElement(By.ClassName("actionname")).Click();
-            Driver.Wait(TimeSpan.FromSeconds(2));
+            ActionBar.SaveChanges.Select();       
 
         }
 

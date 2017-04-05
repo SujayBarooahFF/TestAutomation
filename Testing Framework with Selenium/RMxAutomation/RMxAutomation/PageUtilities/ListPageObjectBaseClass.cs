@@ -11,22 +11,7 @@ namespace RMxAutomationFramework.PageUtilities
     public class ListPageObjectBaseClass
     {
         //public static int lastCount;
-        public static bool IsAt
-        {
-            get
-            {
-                Driver.Wait(TimeSpan.FromSeconds(10));
-                IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.Instance;
-                string entityName = js.ExecuteScript("return getRouteContext().prop[0].EntityName").ToString();
-                int platformResourceTypeId = Convert.ToInt32(js.ExecuteScript("return getRouteContext().prop[3].PlatformResourceTypeId"));
-                        
-                if (entityName.Equals("TradeAgreementVersion") && platformResourceTypeId == 5)
-                        return true;
-                else
-                        return false;
-            }
-        }
-
+             
         public static void Add()
         {
             var addnew = Driver.Instance.FindElement(By.CssSelector("#az_view_az_section1_az_grid1 > div.k-header.k-grid-toolbar > a.k-button.k-button-icontext.k-grid-addnew"));
@@ -52,12 +37,7 @@ namespace RMxAutomationFramework.PageUtilities
         {
             
         }*/
-
-        /*public static void GoTo()
-        {
-           
-        }*/
-       
+                  
         /*public static void GoToNewRecord()
         {
 
