@@ -95,6 +95,11 @@ namespace RMxAutomationFramework
 
             ActionBar.SaveChanges.Select();       
         }
+        public void DiscardChanges()
+        {
+            Driver.Wait(TimeSpan.FromSeconds(1));
+            ActionBar.Cancel.Select();
+        }
 
   }
 }

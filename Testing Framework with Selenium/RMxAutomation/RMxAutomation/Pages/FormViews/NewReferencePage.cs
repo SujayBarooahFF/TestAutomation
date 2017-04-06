@@ -27,5 +27,10 @@ namespace RMxAutomationFramework
                 return String.Empty;
             }
         }
+        // e.g. usage of the Vertical Action Bar navigation
+        public void MakeFavourite()
+        {
+            VerticalActionBarOptions.VerticalActionBarNavigation.MakeFavourite.Select();
+        }
     }
 }
