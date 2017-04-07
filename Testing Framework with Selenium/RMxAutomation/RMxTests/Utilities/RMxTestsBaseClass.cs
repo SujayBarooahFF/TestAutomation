@@ -15,6 +15,7 @@ namespace RMxTests
         public void Init()
         {
             Driver.Initialize();
+            JsExecutor.Initialize();
             LoginPage.Goto();
             LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty90").Login();
             Thread.Sleep(1000);

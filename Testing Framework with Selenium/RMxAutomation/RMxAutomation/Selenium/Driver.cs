@@ -7,7 +7,6 @@ namespace RMxAutomationFramework
     public class Driver
     {
         public static IWebDriver Instance { get; set; }
-
         public static void Initialize()
         {
             ChromeOptions options = new ChromeOptions();
@@ -16,12 +15,10 @@ namespace RMxAutomationFramework
             Instance = new ChromeDriver(options);
             TurnOnWait();
         }
-
         public static void Close()
         {
             Instance.Close();
         }
-
         // generalized wait method
         public static void Wait(TimeSpan timeSpan)
         {
@@ -44,5 +41,14 @@ namespace RMxAutomationFramework
 
         }
 
+    }
+    
+    public class JsExecutor
+    {
+        public static IJavaScriptExecutor JsExecutor { get; set; }
+        public static void Initialize()
+        {
+           JsExecutor = (IJavaScriptExecutor)Driver.Instance;
+        }
     }
 }

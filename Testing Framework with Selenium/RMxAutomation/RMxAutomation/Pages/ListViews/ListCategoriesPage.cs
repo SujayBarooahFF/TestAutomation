@@ -93,9 +93,12 @@ namespace RMxAutomationFramework
 
             Driver.Wait(TimeSpan.FromSeconds(1));
 
-            Driver.Instance.FindElement(By.CssSelector("#az_form_rmx_tradeagreementversion_az_actionbar1 > div.actionbarcontent > div > ul > li:nth-child(1)")).Click();
-            Driver.Wait(TimeSpan.FromSeconds(2));
-
+            ActionBar.SaveChanges.Select();
+        }
+        public void DiscardChanges()
+        {
+            Driver.Wait(TimeSpan.FromSeconds(1));
+            ActionBar.Cancel.Select();
         }
 
     }

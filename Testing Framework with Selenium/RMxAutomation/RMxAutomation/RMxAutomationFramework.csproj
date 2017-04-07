@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemMenuNavigation\SystemMenuNavigation.cs" />
     <Compile Include="Pages\FormViews\NewTradeAgreementPage.cs" />
+    <Compile Include="VerticalActionBarOptions\VerticalActionBarNavigation.cs" />
+    <Compile Include="VerticalActionBarOptions\VerticalActionBarSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
