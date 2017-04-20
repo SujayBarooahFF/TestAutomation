@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ReferencesTests\AllReferencesTests.cs" />
+    <Compile Include="RoundingMethodsTests\AllRoundingMethodTests.cs" />
     <Compile Include="SalesTradeAgreementTests\AllSalesTradeAgreementsTests.cs" />
     <Compile Include="Smoke Tests\CreateTradeAgreementTest.cs" />
     <Compile Include="Smoke Tests\LoginTests.cs" />
@@ -66,6 +67,7 @@
       <Name>RMxAutomationFramework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

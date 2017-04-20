@@ -54,6 +54,7 @@
     <Compile Include="Pages\ListViews\ListCategoriesPage.cs" />
     <Compile Include="Pages\ListViews\ListReferencesPage.cs" />
     <Compile Include="Pages\FormViews\NewReferencePage.cs" />
+    <Compile Include="Pages\ListViews\ListRoundingMethodsPage.cs" />
     <Compile Include="PageUtilities\ListPageObjectBaseClass.cs" />
     <Compile Include="SystemMenuNavigation\MenuSelector.cs" />
     <Compile Include="Pages\Others\DashboardPage.cs" />

@@ -19,9 +19,9 @@ namespace RMxAutomationFramework.Pages.ListViews
         public static bool IsAt()
         {
                 Driver.Wait(TimeSpan.FromSeconds(10));
-                
-                string entityName = JsExecutor.JsExecutor.ExecuteScript("return getRouteContext().prop[0].EntityName").ToString();
-                int platformResourceTypeId = Convert.ToInt32(JsExecutor.JsExecutor.ExecuteScript("return getRouteContext().prop[3].PlatformResourceTypeId"));
+
+                string entityName = JsExecutor.JscriptExecutor.ExecuteScript("return getRouteContext().prop[0].EntityName").ToString();
+                int platformResourceTypeId = Convert.ToInt32(JsExecutor.JscriptExecutor.ExecuteScript("return getRouteContext().prop[3].PlatformResourceTypeId"));
 
                 if (entityName.Equals("RoundingMethod") && platformResourceTypeId == 5)
                     return true;
