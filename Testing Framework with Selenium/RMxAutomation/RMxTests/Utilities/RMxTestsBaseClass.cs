@@ -43,7 +43,7 @@ namespace RMxTests
                 filename = this.testContextInstance.TestName;
                 var timeStamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
                 string ext = ".png";
-                filename = timeStamp + ext;
+                filename = filename + "_" + timeStamp + ext;
 
                 Driver.TakeScreenshot(filename);
             }

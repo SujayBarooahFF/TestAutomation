@@ -8,7 +8,8 @@ namespace RMxAutomationFramework
 {
     public class Driver
     {
-       public static string saveLocation;
+        public static string pathString;
+        public static string foldername;
         
         public static IWebDriver Instance { get; set; }
         public static void Initialize()
@@ -57,25 +58,30 @@ namespace RMxAutomationFramework
         {
            try
             {
-                createTempDirectory();
+                string filepath = createTempDirectory(filename);
                 //createFilename();
                 var screenshot = ((ITakesScreenshot)Driver.Instance).GetScreenshot();
-                screenshot.SaveAsFile(filename, ScreenshotImageFormat.Png);
+                screenshot.SaveAsFile(filepath, ScreenshotImageFormat.Png);
             }
             catch(Exception){}
         }
-        public static void createTempDirectory()
+        public static string createTempDirectory(string filename)
         {
+            // need to be replaced with a relative directory
+            foldername = @"C:\Users\sbarooah\Desktop\TestScreenshots";
             try
             {
-                string saveLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Screenshots");
-                //string filePath = Path.Combine(myFolder, ord + ".pdf");
-                bool dirExists = System.IO.Directory.Exists(saveLocation);
+                pathString = System.IO.Path.Combine(foldername);
+                bool dirExists = System.IO.Directory.Exists(pathString);
                 if (!dirExists)
-                    System.IO.Directory.CreateDirectory(saveLocation);
+                {
+                    System.IO.Directory.CreateDirectory(pathString);                    
+                }
+                pathString = System.IO.Path.Combine(pathString, filename);
             }
             catch (Exception) { }
-        }            
+            return pathString;
+        }   
     }
     
     public class JsExecutor  
