@@ -44,16 +44,17 @@ namespace RMxAutomationFramework
         }
          */
 
-        /* public static void StoreCount()
+        public static void StoreCount()
         {
             lastCount = GetSalesTradeAgreementCount();
-        }*/
+        }
 
-        /*private static int GetSalesTradeAgreementCount()
+        private static int GetSalesTradeAgreementCount()
         {
-            // find count of 
+            // find count of
+ 
             return 0;
-        }*/
+        }
 
         //public static int PreviousSalesTACount { get; set; }
 

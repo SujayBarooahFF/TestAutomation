@@ -22,7 +22,7 @@ namespace RMxTests
             Driver.Initialize();
             JsExecutor.Initialize();
             LoginPage.Goto();
-            LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty91").Login();
+            LoginPage.LoginAs("sbarooah@flintfox.com").WithPassword("Qwerty91").Login(); // valid user credentials in RMx is needed
             Driver.Wait(TimeSpan.FromSeconds(1));            
         }
         public TestContext TestContext
